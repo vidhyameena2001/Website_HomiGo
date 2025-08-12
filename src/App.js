@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorBoundary from './ErrorBoundary';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
+import { useNavigate, Route,Routes } from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   useNavigate,
+// } from "react-router-dom";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -59,21 +62,20 @@ import homewashingmachine from "./components/resources/washingmachine.jpg"
 import homesmarthomedevice from "./components/resources/smartdevice.jpg"
 import homelocalshifting from "./components/resources/localshifting.jpg"
 import homeintercityrelocation from "./components/resources/intercity.jpg"
-import homefurnituredisassembly from "./components/resources/pestClean.jpg"
-// import homeloadingunloading from "./components/resources/.jpg"
-// import homecooksandchefs from "./components/resources/.jpg"
-// import homehousemaids from "./components/resources/.jpg"
-// import homecareprovider from "./components/resources/.jpg"
-// import homedrivers from "./components/resources/.jpg"
-// import homeclothing from "./components/resources/.jpg"
-// import homedrycleaning from "./components/resources/.jpg"
-// import homeshoecleaning from "./components/resources/.jpg"
-// import homecctvinstall from "./components/resources/.jpg"
-// import homesmartlocks from "./components/resources/.jpg"
-// import homeintercom from "./components/resources/.jpg"
-// import homesalon from "./components/resources/.jpg"
-// import homefitness from "./components/resources/.jpg"
-// import homephysiotherapy from "./components/resources/.jpg"
+import homefurnituredisassembly from "./components/resources/reassembly.jpg"
+import homeloadingunloading from "./components/resources/loading.jpg"
+import homecooksandchefs from "./components/resources/cooks.jpg"
+import homehousemaids from "./components/resources/housemaids.jpg"
+import homecareprovider from "./components/resources/careProvider.jpg"
+import homedrivers from "./components/resources/drivers.jpg"
+import homeclothing from "./components/resources/iron.jpg"
+import homedrycleaning from "./components/resources/drycleaning.jpg"
+import homecctvinstall from "./components/resources/cctvinstallation.jpg"
+import homesmartlocks from "./components/resources/smartlock1.jpg"
+import homeintercom from "./components/resources/smartlocks.jpg"
+import homesalon from "./components/resources/homesalon.jpg"
+import homefitness from "./components/resources/fitness.jpg"
+import homephysiotherapy from "./components/resources/physiotherapist.jpg"
 
 
 import "./App.css";
@@ -158,20 +160,19 @@ function AppContent() {
     { id: 601, name: "Local Shifting", category: "Moving and Packing Services", price: "₹5000", image: homelocalshifting },
     { id: 602, name: "Intercity Relocation", category: "Moving and Packing Services", price: "₹15000", image: homeintercityrelocation },
     { id: 603, name: "Furniture Disassembly/Reassembly", category: "Moving and Packing Services", price: "₹2500", image:homefurnituredisassembly },
-    { id: 604, name: "Loading and Unloading", category: "Moving and Packing Services", price: "₹2000", image: homefurnitureclean },
-    { id: 701, name: "Cooks and chefs", category: "Household Staffing Services", price: "₹15000/month", image: homefurnitureclean },
-    { id: 702, name: "Housemaids", category: "Household Staffing Services", price: "₹8000/month", image: homefurnitureclean },
-    { id: 703, name: "Elderly care providers", category: "Household Staffing Services", price: "₹12000/month", image: homefurnitureclean },
-    { id: 704, name: "Drivers on demand", category: "Household Staffing Services", price: "₹20000/month", image: homefurnitureclean },
-    { id: 801, name: "Clothing washing and ironing", category: "Laundry and Dry Cleaning Services", price: "₹150", image: homefurnitureclean },
-    { id: 802, name: "Dry cleaning", category: "Laundry and Dry Cleaning Services", price: "₹300", image: homefurnitureclean },
-    { id: 803, name: "Shoe cleaning", category: "Laundry and Dry Cleaning Services", price: "₹250", image: homefurnitureclean },
-    { id: 901, name: "CCTV installation & monitoring", category: "Security and Surveillance", price: "₹4000", image: homefurnitureclean },
-    { id: 902, name: "Smart locks and alarms", category: "Security and Surveillance", price: "₹3500", image: homefurnitureclean },
-    { id: 903, name: "Intercom systems", category: "Security and Surveillance", price: "₹3000", image: homefurnitureclean },
-    { id: 110, name: "At-home salon", category: "Wellness and LifeStyle Services", price: "₹1200", image: homefurnitureclean },
-    { id: 111, name: "Fitness/Yoga trainers", category: "Wellness and LifeStyle Services", price: "₹1500", image: homefurnitureclean },
-    { id: 112, name: "Physiotherapy", category: "Wellness and LifeStyle Services", price: "₹2000", image: homefurnitureclean }
+    { id: 604, name: "Loading and Unloading", category: "Moving and Packing Services", price: "₹2000", image: homeloadingunloading },
+    { id: 701, name: "Cooks and chefs", category: "Household Staffing Services", price: "₹15000/month", image: homecooksandchefs },
+    { id: 702, name: "Housemaids", category: "Household Staffing Services", price: "₹8000/month", image: homehousemaids },
+    { id: 703, name: "Elderly care providers", category: "Household Staffing Services", price: "₹12000/month", image: homecareprovider },
+    { id: 704, name: "Drivers on demand", category: "Household Staffing Services", price: "₹20000/month", image: homedrivers },
+    { id: 801, name: "Clothing washing and ironing", category: "Laundry and Dry Cleaning Services", price: "₹150", image: homeclothing},
+    { id: 802, name: "Dry cleaning", category: "Laundry and Dry Cleaning Services", price: "₹300", image: homedrycleaning },
+    { id: 901, name: "CCTV installation & monitoring", category: "Security and Surveillance", price: "₹4000", image: homecctvinstall },
+    { id: 902, name: "Smart locks and alarms", category: "Security and Surveillance", price: "₹3500", image: homesmartlocks },
+    { id: 903, name: "Intercom systems", category: "Security and Surveillance", price: "₹3000", image: homeintercom },
+    { id: 110, name: "At-home salon", category: "Wellness and LifeStyle Services", price: "₹1200", image: homesalon },
+    { id: 111, name: "Fitness/Yoga trainers", category: "Wellness and LifeStyle Services", price: "₹1500", image: homefitness },
+    { id: 112, name: "Physiotherapy", category: "Wellness and LifeStyle Services", price: "₹2000", image: homephysiotherapy }
   ];
 
   const filteredProducts = searchTerm

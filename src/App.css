@@ -1,3 +1,18 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Container */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -798,7 +813,4 @@ body.modal-open {
 }
 .cat{
   background-color: rgb(122, 202, 41);
-}
-.product-page {
-  display: block; /* Ensure content is not hidden */
 }
